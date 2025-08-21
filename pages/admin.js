@@ -44,8 +44,10 @@ const admin = () => {
 
   return (
     <>
-      <Header />
+      <Header page={"admin"} />
       <Footer />
+
+      {!loader && <Loader/>}
     </>
   );
 };

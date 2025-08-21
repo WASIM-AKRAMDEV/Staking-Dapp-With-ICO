@@ -57,7 +57,10 @@ export async function CONTRACT_DATA(address) {
     console.log(contractObj);
 
     if (address) {
-      const contractOwner = await contractObj.getNotification();
+      const contractOwner = await contractObj.owner();
+      const contractAddress = await contractObj.address;
+
+      const notifications = await contractObj.getNotification()
 
       const _notificationArray = await Promise.all(
         notifications.map(
@@ -99,7 +102,7 @@ export async function CONTRACT_DATA(address) {
         };
         poolInfoArray.push(pool);
       }
-
+      console.log(poolInfoArray);
       const totalDepositAmount = poolInfoArray.reduce((total, pool) => {
         return total + parseFloat(pool.depositedAmount);
       },0);
@@ -332,7 +335,7 @@ export const addTokenMetaMask = async (token) => {
     const tokenDecimals = await contract.decimals();
     const tokenAddress = await contract.address;
     const tokenSymbol = await contract.symbol();
-    const tokenImage = await TOKEN_LOGO;
+    const tokenImage =  TOKEN_LOGO;
 
     try {
       const wasAdded = await window.ethereum.request({
