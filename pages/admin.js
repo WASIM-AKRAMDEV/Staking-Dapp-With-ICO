@@ -29,7 +29,7 @@ const admin = () => {
       setLoader(true);
 
       if (address?.toLowerCase() == ADMIN_ADDRESS?.toLowerCase()) {
-        setCheckAdmin(true);
+        setCheckAdmin(false);
         const data = await CONTRACT_DATA(address);
         console.log("Data", data);
         setPoolDetails(data);
