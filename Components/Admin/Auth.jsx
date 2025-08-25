@@ -1,7 +1,7 @@
 import React from "react";
 
 const Auth = () => {
-  return <div>Auth</div>;
+  return <div className="new-loader-wrapper-Admin">Auth</div>;
 };
 
 export default Auth;
