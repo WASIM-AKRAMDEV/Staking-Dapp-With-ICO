@@ -16,7 +16,9 @@ const Admin = ({
   sweep,
   setModifyPoolID,
 }) => {
-  return <div>Admin</div>;
+  return <div className="">
+  <div></div>
+  </div>;
 };
 
 export default Admin;
