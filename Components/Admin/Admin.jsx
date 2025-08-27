@@ -16,9 +16,24 @@ const Admin = ({
   sweep,
   setModifyPoolID,
 }) => {
-  return <div className="">
-  <div></div>
-  </div>;
+  return (
+    <div className="section">
+      <div className="container">
+        <div className="row">
+          <AdminNav />
+          <div className="col-12 col-lg-9">
+            <div className="tab-content">
+              <div
+                className="tab-pane fade show active"
+                id="tab-1"
+                role="tabpanel"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Admin;
