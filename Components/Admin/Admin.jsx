@@ -27,7 +27,15 @@ const Admin = ({
                 className="tab-pane fade show active"
                 id="tab-1"
                 role="tabpanel"
-              ></div>
+              >
+                <div className="row">
+                  {
+                    poolDetails?.poolInfoArray.map((pool, index)=>(
+                      <AdminCard key={i}/>
+                    ))
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
