@@ -31,7 +31,7 @@ const Admin = ({
                 <div className="row">
                   {
                     poolDetails?.poolInfoArray.map((pool, index)=>(
-                      <AdminCard key={i}/>
+                      <AdminCard key={index} name={`Current APY: ${pool.apy}`}/>
                     ))
                   }
                 </div>
